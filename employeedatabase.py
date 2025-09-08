@@ -15,7 +15,12 @@ def add_employee():
         print("Employee ID already exists! Please input a new ID.")
         return
     name = input("Enter employee name: ")
+    while true:
+      try:
     age = int(input("Enter employee age: "))
+    break
+ except ValueError:
+print("invalid input for age. Please enter a valid number in integer format.") 
     department = input("Enter employee department: ")
     salary = int(input("Enter employee salary: "))
     employees[emp_id] = {"Name": name, "Age": age, "Department": department, "Salary": salary}
