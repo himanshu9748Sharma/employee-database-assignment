@@ -11,26 +11,26 @@ def add_employee():
     """Adds a new employee to data base."""
     print("---- Add new employee ----")
     while True:
-      try:
-      emp_id = int(input("Enter Employee ID: "))
-      break
-except ValueError:
-print("invalid input for emp_id. Please input a valid number in integer format.")
+       try:
+          emp_id = int(input("Enter Employee ID: "))
+          break
+except ValueError: 
+    print("invalid input for emp_id. Please input a valid number in integer format.")
   if emp_id in employees:
         print("Employee ID already exists! Please input a new ID.")
         return
     name = input("Enter employee name: ")
     while True:
       try:
-    age = int(input("Enter employee age: "))
-    break
+          age = int(input("Enter employee age: "))
+          break
  except ValueError:
-print("invalid input for age. Please enter a valid number in integer format.") 
+        print("invalid input for age. Please enter a valid number in integer format.") 
     department = input("Enter employee department: ")
     while True:
-      try:
-        salary = int(input("Enter employee salary: "))
-        break
+       try:
+          salary = int(input("Enter employee salary: "))
+          break
       except ValueError:
         print("invalid input for salary. Please enter a valid number in integer format.")
     employees[emp_id] = {"Name": name, "Age": age, "Department": department, "Salary": salary}
